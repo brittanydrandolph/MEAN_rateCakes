@@ -1,0 +1,25 @@
+#details {
+    display: inline-block;
+    overflow: scroll;
+    height: 200px;
+    
+}
+.pic2 {
+    height: 275px;
+    display: inline-block;
+    float: left;
+    margin-left: 50px;
+}
+#container{
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid skyblue;
+    width: 805px;
+    margin-left: -407px;
+}
+
+h3{
+    display:inline-block;
+    vertical-align: top;
+}

@@ -1,0 +1,48 @@
+<h1>{{title}}</h1>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <h2>Submit a cupcake to be rated</h2>
+        <hr>
+            <form (submit)="onSubmitCupcake()">
+                Baker name: <input type="text" name="newCake.baker" [(ngModel)]="newCake.baker" class="text">
+                <br>
+                Image Url: <input type="text" name="newCake.image" [(ngModel)]="newCake.image" class="text">
+                <br>
+                <input type="submit" value="Submit your cupcake!" class="button">
+            </form>
+        </div>
+        <div class="col">
+        <h2>Rate these cupcakes</h2>
+        <hr>
+        <div id="rightpanel">
+            <div *ngFor="let cake of cakes; let idx = index">
+                <div id="cake">
+                    <div id="imgbox">
+                        <a (click)="info(idx)"><img class="picture" [src]="cake.image"></a>
+                    </div>
+                    <div id="formbox">
+                        <form id="rating" (submit)="ratingSubmit(cake._id)">
+                        <select class="stars" name="newRating.rating" [(ngModel)]="newRating.rating">
+                            <option value="1" selected>1 star</option>
+                            <option value="2">2 stars</option>
+                            <option value="3">3 stars</option>
+                            <option value="4">4 stars</option>
+                            <option value="5">5 stars</option>
+                        </select>
+                        <br>
+                        <textarea class="textarea" name="newRating.comment" [(ngModel)]="newRating.comment"></textarea>
+                        <br>
+                        <input type="hidden" name="cakeId" value="cake._id">
+                        <input class="btn2" type="submit" value="Submit your rating!">              
+                        </form>
+                    </div>
+                </div>  
+                <hr class="in_picture">
+                </div>
+        </div>
+        <div id="bottom">
+                <app-new-app *ngIf="selectedCake" [cakesToShow]="selectedCake" [avgRating]="avg"></app-new-app>
+            </div>
+    </div>

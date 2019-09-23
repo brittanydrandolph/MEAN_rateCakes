@@ -1,0 +1,72 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text{
+    float: right;
+    width: 175px;
+    margin-right: 40px;
+}
+
+
+h1{
+    text-align: center;
+    margin-bottom: -7px;
+}
+h2{
+    text-align: center;
+    margin-bottom: -7px;
+}
+
+hr{
+    background-color: skyblue;
+    height: 1px;
+    width: 350px;
+}
+
+
+.col{
+    display: inline-block;
+    border: 1px solid skyblue;
+    width: 400px;
+    vertical-align: top;
+    margin-right: 5px;
+    height: 275px;
+
+}
+
+.row{
+    text-align: center;
+}
+
+.picture{
+    height: 175px;
+}
+
+#imgbox{
+    display: inline-block;
+}
+
+#formbox{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+}
+.textarea{
+    height: 120px;
+}
+.stars{
+    margin-bottom: 3px;
+}
+
+.in_picture{
+    width: 370px;
+}
+
+#rightpanel{
+    overflow: scroll;
+    height: 215px;
+}
+
+.button{
+    margin-top:5px;
+}
